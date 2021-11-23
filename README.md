@@ -10,7 +10,7 @@ A forecasting tool for showing weather for a city.
 
 - View the current weather as well as a 5-day forecast
 
-- Search history is saved in the browser and display in the left pane
+- Search history is saved in the browser and displayed in the left pane
 
 - Icons visually describe weather conditions
 
