@@ -16,13 +16,6 @@ var historyEl = document.getElementById("history");
 
 var searchHistory = [];
 
-// fetch(
-//   `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}`
-// ).then((response) => response.json().then((data) => console.log(data)));
-// fetch(
-//   `https://api.openweathermap.org/data/2.5/onecall?lat=21.3069&lon=-157.8583&units=imperial&exclude=hourly&appid=${API_KEY}`
-// ).then((response) => response.json().then((data) => console.log(data)));
-
 var getForecast = function (cityName) {
   fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}`
@@ -154,4 +147,3 @@ var loadSearchHistroy = () => {
 
 queryHandler();
 loadSearchHistroy();
-// getForecast("Honolulu");

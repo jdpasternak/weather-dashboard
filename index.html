@@ -19,7 +19,10 @@
       crossorigin="anonymous"
       defer
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/luxon@2.1.1/build/global/luxon.min.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/luxon@2.1.1/build/global/luxon.min.js"
+      defer
+    ></script>
     <script src="assets/js/script.js" defer></script>
     <title>Weather Dashboard</title>
   </head>
@@ -36,18 +39,21 @@
         <!-- Search -->
         <section class="col-12 col-sm-4">
           <h2>Search for a City:</h2>
-          <input type="text" id="citySearch" class="form-control mb-3" placeholder="City" autofocus />
-          <button id="searchButton" class="btn btn-primary col-12 disabled">Search</button>
+          <input
+            type="text"
+            id="citySearch"
+            class="form-control mb-3"
+            placeholder="City"
+            autofocus
+          />
+          <button id="searchButton" class="btn btn-primary col-12 disabled">
+            Search
+          </button>
           <hr />
           <!-- Search History -->
-          <ul id="history" class="list-group">
-            <!-- <a class="list-group-item btn btn-secondary">Austin</a>
-            <a class="list-group-item btn btn-secondary">Chicago</a>
-            <a class="list-group-item btn btn-secondary">New York</a>
-            <a class="list-group-item btn btn-secondary">Orlando</a> -->
-          </ul>
+          <ul id="history" class="list-group"></ul>
         </section>
-        
+
         <section id="forecasts" class="col-12 col-sm-8">
           <!-- Current Forecast -->
           <div id="currentForecast" class="card mb-3">
@@ -71,83 +77,10 @@
           <!-- 5-Day Forecast -->
           <div>
             <h3>5-Day Forecast:</h3>
-            <div id="fiveDayForecast" class="row justify-content-between g-1">
-              <div class="col-12 col-xl-2 card">
-                <div class="card-body">
-                  <h6 id="day1Date" class="card-title">11/22/2021</h4>
-                  <div class="card-text">
-                    <div>
-                      <span id="day1WeatherIcon"> cloud_showers </span>
-                    </div>
-                    <div>
-                      Temp: <span id="day1Temperature">73.72&deg;F</span>
-                    </div>
-                    <div>Wind: <span id="day1Wind">9.53 MPH</span></div>
-                    <div>Humidity: <span id="day1Humidity">66</span>%</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-xl-2 card">
-                <div class="card-body">
-                  <h6 id="day1Date" class="card-title">11/22/2021</h4>
-                  <div class="card-text">
-                    <div>
-                      <span id="day1WeatherIcon"> cloud_showers </span>
-                    </div>
-                    <div>
-                      Temp: <span id="day1Temperature">73.72&deg;F</span>
-                    </div>
-                    <div>Wind: <span id="day1Wind">9.53 MPH</span></div>
-                    <div>Humidity: <span id="day1Humidity">66</span>%</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-xl-2 card">
-                <div class="card-body">
-                  <h6 id="day1Date" class="card-title">11/22/2021</h4>
-                  <div class="card-text">
-                    <div>
-                      <span id="day1WeatherIcon"> cloud_showers </span>
-                    </div>
-                    <div>
-                      Temp: <span id="day1Temperature">73.72&deg;F</span>
-                    </div>
-                    <div>Wind: <span id="day1Wind">9.53 MPH</span></div>
-                    <div>Humidity: <span id="day1Humidity">66</span>%</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-xl-2 card">
-                <div class="card-body">
-                  <h6 id="day1Date" class="card-title">11/22/2021</h4>
-                  <div class="card-text">
-                    <div>
-                      <span id="day1WeatherIcon"> cloud_showers </span>
-                    </div>
-                    <div>
-                      Temp: <span id="day1Temperature">73.72&deg;F</span>
-                    </div>
-                    <div>Wind: <span id="day1Wind">9.53 MPH</span></div>
-                    <div>Humidity: <span id="day1Humidity">66</span>%</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-xl-2 card">
-                <div class="card-body">
-                  <h6 id="day1Date" class="card-title">11/22/2021</h4>
-                  <div class="card-text">
-                    <div>
-                      <span id="day1WeatherIcon"> cloud_showers </span>
-                    </div>
-                    <div>
-                      Temp: <span id="day1Temperature">73.72&deg;F</span>
-                    </div>
-                    <div>Wind: <span id="day1Wind">9.53 MPH</span></div>
-                    <div>Humidity: <span id="day1Humidity">66</span>%</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div
+              id="fiveDayForecast"
+              class="row justify-content-between g-1"
+            ></div>
           </div>
         </section>
       </div>
