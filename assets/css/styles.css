@@ -13,3 +13,21 @@ header {
 .card-text div {
   margin-bottom: 1rem;
 }
+
+.btn {
+  transition: all 0.5s ease-out;
+  background-size: 1px 100px;
+  background-position: 0 -5px;
+}
+
+.btn-secondary {
+  background-image: linear-gradient(45deg, black, lightgray);
+}
+
+.btn-primary {
+  background-image: linear-gradient(45deg, purple, blue, aqua) !important;
+}
+
+.btn:hover {
+  background-position: 1px -50px;
+}
