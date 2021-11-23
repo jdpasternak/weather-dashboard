@@ -19,6 +19,7 @@
       crossorigin="anonymous"
       defer
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.1.1/build/global/luxon.min.js" defer></script>
     <script src="assets/js/script.js" defer></script>
     <title>Weather Dashboard</title>
   </head>
@@ -52,25 +53,25 @@
           <div id="currentForecast" class="card mb-3">
             <div class="card-body">
               <h3 class="card-title">
-                <span id="currentCity">Atlanta</span>
-                <span id="currentDate">11/22/2021</span>
-                <span id="currentWeatherIcon" class=""> cloudy </span>
+                <span id="currentCity"></span>
+                <span id="currentDate"></span>
+                <span id="currentWeatherIcon" class=""></span>
               </h3>
               <div class="card-text">
-                <div>Temp: <span id="currentTemp">74.01&deg;F</span></div>
-                <div>Wind: <span id="currentWind">6.67 MPH</span></div>
-                <div>Humidity: <span id="currentHumidity">46</span>%</div>
+                <div>Temp: <span id="currentTemp"></span></div>
+                <div>Wind: <span id="currentWind"></span></div>
+                <div>Humidity: <span id="currentHumidity"></span></div>
                 <div>
                   UV Index:
-                  <span id="currentUvIndex" class="badge bg-success">0.47</span>
+                  <span id="currentUvIndex" class="badge bg-success"></span>
                 </div>
               </div>
             </div>
           </div>
           <!-- 5-Day Forecast -->
-          <div id="fiveDayForecast">
+          <div>
             <h3>5-Day Forecast:</h3>
-            <div class="row justify-content-between g-1">
+            <div id="fiveDayForecast" class="row justify-content-between g-1">
               <div class="col-12 col-xl-2 card">
                 <div class="card-body">
                   <h6 id="day1Date" class="card-title">11/22/2021</h4>
