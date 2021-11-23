@@ -37,7 +37,7 @@
         <section class="col-12 col-sm-4">
           <h2>Search for a City:</h2>
           <input type="text" id="citySearch" class="form-control mb-3" placeholder="City" autofocus />
-          <button class="btn btn-primary col-12 disabled">Search</button>
+          <button id="searchButton" class="btn btn-primary col-12 disabled">Search</button>
           <hr />
           <!-- Search History -->
           <ul class="list-group">
@@ -48,7 +48,7 @@
           </ul>
         </section>
         
-        <section class="col-12 col-sm-8">
+        <section id="forecasts" class="col-12 col-sm-8">
           <!-- Current Forecast -->
           <div id="currentForecast" class="card mb-3">
             <div class="card-body">
