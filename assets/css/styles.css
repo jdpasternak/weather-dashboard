@@ -1,0 +1,15 @@
+header {
+  background: linear-gradient(45deg, purple, blue, aquamarine);
+}
+
+.list-group-item {
+  margin-bottom: 1rem;
+}
+
+.list-group-item + .list-group-item {
+  border-top-width: 1px !important;
+}
+
+.card-text div {
+  margin-bottom: 1rem;
+}

@@ -11,7 +11,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
     <!-- Scripts -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -23,7 +23,133 @@
     <title>Weather Dashboard</title>
   </head>
   <body>
-    <header></header>
-    <main></main>
+    <header class="text-light mb-3">
+      <div class="container">
+        <div class="row">
+          <h1 class="col-12 text-center">Weather Dashboard</h1>
+        </div>
+      </div>
+    </header>
+    <main class="container">
+      <div class="row">
+        <!-- Search -->
+        <section class="col-12 col-sm-4">
+          <h2>Search for a City:</h2>
+          <input type="text" id="citySearch" class="form-control mb-3" placeholder="City" autofocus />
+          <button class="btn btn-primary col-12 disabled">Search</button>
+          <hr />
+          <!-- Search History -->
+          <ul class="list-group">
+            <a class="list-group-item btn btn-secondary">Austin</a>
+            <a class="list-group-item btn btn-secondary">Chicago</a>
+            <a class="list-group-item btn btn-secondary">New York</a>
+            <a class="list-group-item btn btn-secondary">Orlando</a>
+          </ul>
+        </section>
+        
+        <section class="col-12 col-sm-8">
+          <!-- Current Forecast -->
+          <div id="currentForecast" class="card mb-3">
+            <div class="card-body">
+              <h3 class="card-title">
+                <span id="currentCity">Atlanta</span>
+                <span id="currentDate">11/22/2021</span>
+                <span id="currentWeatherIcon" class=""> cloudy </span>
+              </h3>
+              <div class="card-text">
+                <div>Temp: <span id="currentTemp">74.01&deg;F</span></div>
+                <div>Wind: <span id="currentWind">6.67 MPH</span></div>
+                <div>Humidity: <span id="currentHumidity">46</span>%</div>
+                <div>
+                  UV Index:
+                  <span id="currentUvIndex" class="badge bg-success">0.47</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 5-Day Forecast -->
+          <div id="fiveDayForecast">
+            <h3>5-Day Forecast:</h3>
+            <div class="row justify-content-between g-1">
+              <div class="col-12 col-xl-2 card">
+                <div class="card-body">
+                  <h6 id="day1Date" class="card-title">11/22/2021</h4>
+                  <div class="card-text">
+                    <div>
+                      <span id="day1WeatherIcon"> cloud_showers </span>
+                    </div>
+                    <div>
+                      Temp: <span id="day1Temperature">73.72&deg;F</span>
+                    </div>
+                    <div>Wind: <span id="day1Wind">9.53 MPH</span></div>
+                    <div>Humidity: <span id="day1Humidity">66</span>%</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-xl-2 card">
+                <div class="card-body">
+                  <h6 id="day1Date" class="card-title">11/22/2021</h4>
+                  <div class="card-text">
+                    <div>
+                      <span id="day1WeatherIcon"> cloud_showers </span>
+                    </div>
+                    <div>
+                      Temp: <span id="day1Temperature">73.72&deg;F</span>
+                    </div>
+                    <div>Wind: <span id="day1Wind">9.53 MPH</span></div>
+                    <div>Humidity: <span id="day1Humidity">66</span>%</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-xl-2 card">
+                <div class="card-body">
+                  <h6 id="day1Date" class="card-title">11/22/2021</h4>
+                  <div class="card-text">
+                    <div>
+                      <span id="day1WeatherIcon"> cloud_showers </span>
+                    </div>
+                    <div>
+                      Temp: <span id="day1Temperature">73.72&deg;F</span>
+                    </div>
+                    <div>Wind: <span id="day1Wind">9.53 MPH</span></div>
+                    <div>Humidity: <span id="day1Humidity">66</span>%</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-xl-2 card">
+                <div class="card-body">
+                  <h6 id="day1Date" class="card-title">11/22/2021</h4>
+                  <div class="card-text">
+                    <div>
+                      <span id="day1WeatherIcon"> cloud_showers </span>
+                    </div>
+                    <div>
+                      Temp: <span id="day1Temperature">73.72&deg;F</span>
+                    </div>
+                    <div>Wind: <span id="day1Wind">9.53 MPH</span></div>
+                    <div>Humidity: <span id="day1Humidity">66</span>%</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-xl-2 card">
+                <div class="card-body">
+                  <h6 id="day1Date" class="card-title">11/22/2021</h4>
+                  <div class="card-text">
+                    <div>
+                      <span id="day1WeatherIcon"> cloud_showers </span>
+                    </div>
+                    <div>
+                      Temp: <span id="day1Temperature">73.72&deg;F</span>
+                    </div>
+                    <div>Wind: <span id="day1Wind">9.53 MPH</span></div>
+                    <div>Humidity: <span id="day1Humidity">66</span>%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
   </body>
 </html>
