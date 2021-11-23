@@ -12,6 +12,9 @@ var fiveDayForecastEl = document.getElementById("fiveDayForecast");
 var searchButtonEl = document.getElementById("searchButton");
 var citySearchEl = document.getElementById("citySearch");
 var forecastsEl = document.getElementById("forecasts");
+var historyEl = document.getElementById("history");
+
+var searchHistory = [];
 
 // fetch(
 //   `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}`
@@ -27,6 +30,10 @@ var getForecast = function (cityName) {
     if (response.ok) {
       response.json().then((data) => {
         var currentCity = data.name;
+        if (!searchHistory.includes(currentCity)) {
+          searchHistory.push(currentCity);
+          saveSearchHistory();
+        }
         fetch(
           `https://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&units=imperial&exclude=hourly&appid=${API_KEY}`
         ).then((response) =>
@@ -126,5 +133,25 @@ citySearchEl.addEventListener("input", () => {
 });
 searchButtonEl.addEventListener("click", searchButtonHandler);
 
+var saveSearchHistory = () => {
+  localStorage.setItem("history", JSON.stringify(searchHistory));
+};
+
+var loadSearchHistroy = () => {
+  var savedHistory = JSON.parse(localStorage.getItem("history"));
+
+  if (savedHistory) {
+    searchHistory = savedHistory;
+    savedHistory.forEach((h) => {
+      var aEl = document.createElement("a");
+      aEl.classList = "list-group-item btn btn-secondary";
+      aEl.innerHTML = h;
+      aEl.href = `?city=${h}`;
+      historyEl.appendChild(aEl);
+    });
+  }
+};
+
 queryHandler();
+loadSearchHistroy();
 // getForecast("Honolulu");
