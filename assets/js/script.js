@@ -35,7 +35,7 @@ var getForecast = function (cityName) {
             currentDateEl.innerText = DateTime.fromSeconds(
               data.current.dt
             ).toLocaleString();
-            currentWeatherIconEl.innerHTML = `<img src="https://openweathermap.org/img/w/${data.current.weather[0].icon}.png" />`;
+            currentWeatherIconEl.innerHTML = `<img src="https://openweathermap.org/img/w/${data.current.weather[0].icon}.png" title="${data.current.weather[0].description}"" />`;
             currentTempEl.innerHTML = `${data.current.temp}&deg;F`;
             currentWindEl.innerHTML = `${data.current.wind_speed} MPH`;
             currentHumidityEl.innerHTML = `${data.current.humidity}%`;
@@ -55,7 +55,7 @@ var getForecast = function (cityName) {
             for (var i = 1; i < 6; i++) {
               var forecastInfo = futureForecast[i];
               var date = DateTime.fromSeconds(forecastInfo.dt).toLocaleString();
-              var weatherIcon = `<img src="https://openweathermap.org/img/w/${forecastInfo.weather[0].icon}.png"`;
+              var weatherIcon = `<img src="https://openweathermap.org/img/w/${forecastInfo.weather[0].icon}.png" title="${forecastInfo.weather[0].description}"`;
               var temp = forecastInfo.temp.day;
               var wind = forecastInfo.wind_speed;
               var humidity = forecastInfo.humidity;
